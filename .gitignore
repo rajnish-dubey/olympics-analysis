@@ -15,15 +15,6 @@ ENV/
 env/
 env.bak/
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Data files
-*.csv
-*.xlsx
-*.json
-*.db
-
 # Logs
 *.log
 
