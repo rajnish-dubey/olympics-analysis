@@ -15,7 +15,7 @@ st.sidebar.markdown(
     "<h1 style='font-size:32px;'>Olympics Analysis</h1>",
     unsafe_allow_html=True
 )
-image_path = "/home/dubey/PycharmProjects/olympics-data-analysis-web-app/pictures/olympic-games.webp"
+image_path = "olympics-analysis/pictures/olympic-games.webp"
 st.sidebar.image(image_path, use_column_width=True)
 user_menu = option_menu(
     "Select an option",
@@ -29,7 +29,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 st.markdown('<div style="height: 20px;"></div>', unsafe_allow_html=True)
 
 if user_menu == "Medal Tally":
-    image_path = "/home/dubey/PycharmProjects/olympics-data-analysis-web-app/pictures/totcglightings570b.webp"
+    image_path = "olympics-analysis/pictures/totcglightings570b.webp"
     st.image(image_path, use_column_width=True)
     st.sidebar.header("Medal Tally")
     year, country = helper.country_year_list(df)
@@ -51,7 +51,7 @@ if user_menu == "Medal Tally":
 
 if user_menu == "Overall Analysis":
     st.sidebar.markdown("<br><br>", unsafe_allow_html=True)
-    image_path = "/home/dubey/PycharmProjects/olympics-data-analysis-web-app/pictures/PARIS-MEDALS-header.jpg"
+    image_path = "olympics-analysis/pictures/PARIS-MEDALS-header.jpg"
     st.sidebar.image(image_path, use_column_width=True)
     edition = df['Year'].unique().shape[0] - 1
     cities = df['City'].unique().shape[0]
@@ -303,7 +303,7 @@ if user_menu == "Country-wise Analysis":
 
     if selected_country == 'Select':
         st.subheader("Citius, Altius, Fortius – Communiter")
-        image_path = "/home/dubey/PycharmProjects/olympics-data-analysis-web-app/pictures/d6xr603fq0g71.webp"
+        image_path = "olympics-analysis/pictures/d6xr603fq0g71.webp"
         st.image(image_path, use_column_width=True)
 
     else:
@@ -487,7 +487,7 @@ if user_menu == "Player-wise Analysis":
         st.plotly_chart(fig)
 
     else:
-        image_path = "/home/dubey/PycharmProjects/olympics-data-analysis-web-app/pictures/wu_1626844917.jpg"
+        image_path = "olympics-analysis/pictures/wu_1626844917.jpg"
         st.image(image_path, use_column_width=True)
 
         athlete_data = df[df['Name'] == selected_player]
