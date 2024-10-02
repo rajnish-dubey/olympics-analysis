@@ -67,14 +67,16 @@ def most_successful(df, sport):
     temp_df = df.dropna(subset=['Medal'])
     if sport != 'Overall':
         temp_df = temp_df[temp_df['Sport'] == sport]
-
     top_athletes = temp_df['Name'].value_counts().reset_index().head(20)
     top_athletes.columns = ['Name', 'Medals']
-    result = top_athletes.merge(df[['Name', 'region', 'Sex']], on='Name', how='left')
-    result = result.drop_duplicates('Name')
+    result = top_athletes.merge(df[['Name', 'region', 'Sex', 'Sport']], on='Name', how='left')
+    result = result.drop_duplicates(subset=['Name', 'Sport'])
     result.rename(columns={'region': 'Region'}, inplace=True)
     result['S No'] = range(1, len(result) + 1)
-    result = result[['S No', 'Name', 'Region', 'Sex', 'Medals']]
+    if sport == 'Overall':
+        result = result[['S No', 'Name', 'Region', 'Sex', 'Sport', 'Medals']]
+    else:
+        result = result[['S No', 'Name', 'Region', 'Sex', 'Medals']]
     return result
 
 
