@@ -7,10 +7,16 @@ import seaborn as sns
 import plotly.figure_factory as ff
 from streamlit_option_menu import option_menu
 
-df = pd.read_csv('athlete_events.csv')
-region_df = pd.read_csv('noc_regions.csv')
-df = preprocessor.preprocessor(df, region_df)
-
+@st.cache_data
+def load_data():
+    df = pd.read_csv('athlete_events.csv')
+    region_df = pd.read_csv('noc_regions.csv')
+    return df, region_df
+@st.cache_data
+def preprocess_data(df, region_df):
+    return preprocessor.preprocessor(df, region_df)
+df, region_df = load_data()
+df = preprocess_data(df, region_df)
 st.sidebar.markdown(
     "<h1 style='font-size:32px;'>Olympics Analysis</h1>",
     unsafe_allow_html=True
@@ -25,8 +31,11 @@ user_menu = option_menu(
     default_index=0,
     orientation="horizontal"
 )
+
+# Adding space between elements
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown('<div style="height: 20px;"></div>', unsafe_allow_html=True)
+
 
 if user_menu == "Medal Tally":
     image_path = "https://raw.githubusercontent.com/rajnish-dubey/olympics-analysis/main/pictures/totcglightings570b.webp"
