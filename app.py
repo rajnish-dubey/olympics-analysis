@@ -15,7 +15,7 @@ st.sidebar.markdown(
     "<h1 style='font-size:32px;'>Olympics Analysis</h1>",
     unsafe_allow_html=True
 )
-image_path = "olympics-analysis/pictures/olympic-games.webp"
+image_path = "https://raw.githubusercontent.com/rajnish-dubey/olympics-analysis/main/pictures/olympic-games.webp"
 st.sidebar.image(image_path, use_column_width=True)
 user_menu = option_menu(
     "Select an option",
@@ -29,7 +29,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 st.markdown('<div style="height: 20px;"></div>', unsafe_allow_html=True)
 
 if user_menu == "Medal Tally":
-    image_path = "olympics-analysis/pictures/totcglightings570b.webp"
+    image_path = "https://raw.githubusercontent.com/rajnish-dubey/olympics-analysis/main/pictures/totcglightings570b.webp"
     st.image(image_path, use_column_width=True)
     st.sidebar.header("Medal Tally")
     year, country = helper.country_year_list(df)
@@ -51,7 +51,7 @@ if user_menu == "Medal Tally":
 
 if user_menu == "Overall Analysis":
     st.sidebar.markdown("<br><br>", unsafe_allow_html=True)
-    image_path = "olympics-analysis/pictures/PARIS-MEDALS-header.jpg"
+    image_path = "https://raw.githubusercontent.com/rajnish-dubey/olympics-analysis/main/pictures/PARIS-MEDALS-header.jpg"
     st.sidebar.image(image_path, use_column_width=True)
     edition = df['Year'].unique().shape[0] - 1
     cities = df['City'].unique().shape[0]
@@ -87,35 +87,35 @@ if user_menu == "Overall Analysis":
     fig.update_layout(
         plot_bgcolor="#f0f0f0",
         paper_bgcolor="#ffffff",
-        font=dict(color="#000000"),  # Global font color
+        font=dict(color="#000000"),
         xaxis=dict(
             title=dict(
                 font=dict(
-                    color="black",  # Darker color for x-axis title
-                    size=14,  # Font size for x-axis title
-                    family="Arial",  # Font family for x-axis title
-                    weight="bold"  # Bold font
+                    color="black",
+                    size=14,
+                    family="Arial",
+                    weight="bold"
                 )
             ),
             tickfont=dict(
-                color="black",  # Darker color for x-axis ticks
+                color="black",
                 size=12,
-                weight="bold"  # Bold font for tick labels
+                weight="bold"
             )
         ),
         yaxis=dict(
             title=dict(
                 font=dict(
-                    color="black",  # Darker color for y-axis title
-                    size=14,  # Font size for y-axis title
-                    family="Arial",  # Font family for y-axis title
-                    weight="bold"  # Bold font
+                    color="black",
+                    size=14,
+                    family="Arial",
+                    weight="bold"
                 )
             ),
             tickfont=dict(
-                color="black",  # Darker color for y-axis ticks
+                color="black",
                 size=12,
-                weight="bold"  # Bold font for tick labels
+                weight="bold"
             )
         ),
         shapes=[
@@ -128,7 +128,7 @@ if user_menu == "Overall Analysis":
                 x1=1,
                 y1=1,
                 line=dict(color='lightblue', width=2),
-                fillcolor='rgba(255,255,255,0)',  # Transparent fill
+                fillcolor='rgba(255,255,255,0)',
             )
         ]
     )
@@ -140,35 +140,35 @@ if user_menu == "Overall Analysis":
     fig.update_layout(
         plot_bgcolor="#f0f0f0",
         paper_bgcolor="#ffffff",
-        font=dict(color="#000000"),  # Global font color
+        font=dict(color="#000000"),
         xaxis=dict(
             title=dict(
                 font=dict(
-                    color="black",  # Darker color for x-axis title
-                    size=14,  # Font size for x-axis title
-                    family="Arial",  # Font family for x-axis title
-                    weight="bold"  # Bold font
+                    color="black",
+                    size=14,
+                    family="Arial",
+                    weight="bold"
                 )
             ),
             tickfont=dict(
-                color="black",  # Darker color for x-axis ticks
+                color="black",
                 size=12,
-                weight="bold"  # Bold font for tick labels
+                weight="bold"
             )
         ),
         yaxis=dict(
             title=dict(
                 font=dict(
-                    color="black",  # Darker color for y-axis title
-                    size=14,  # Font size for y-axis title
-                    family="Arial",  # Font family for y-axis title
-                    weight="bold"  # Bold font
+                    color="black",
+                    size=14,
+                    family="Arial",
+                    weight="bold"
                 )
             ),
             tickfont=dict(
-                color="black",  # Darker color for y-axis ticks
+                color="black",
                 size=12,
-                weight="bold"  # Bold font for tick labels
+                weight="bold"
             )
         ),
         shapes=[
@@ -181,7 +181,7 @@ if user_menu == "Overall Analysis":
                 x1=1,
                 y1=1,
                 line=dict(color='lightblue', width=2),
-                fillcolor='rgba(255,255,255,0)',  # Transparent fill
+                fillcolor='rgba(255,255,255,0)',
             )
         ]
     )
@@ -193,35 +193,35 @@ if user_menu == "Overall Analysis":
     fig.update_layout(
         plot_bgcolor="#f0f0f0",
         paper_bgcolor="#ffffff",
-        font=dict(color="#000000"),  # Global font color
+        font=dict(color="#000000"),
         xaxis=dict(
             title=dict(
                 font=dict(
-                    color="black",  # Darker color for x-axis title
-                    size=14,  # Font size for x-axis title
-                    family="Arial",  # Font family for x-axis title
-                    weight="bold"  # Bold font
+                    color="black",
+                    size=14,
+                    family="Arial",
+                    weight="bold"
                 )
             ),
             tickfont=dict(
-                color="black",  # Darker color for x-axis ticks
+                color="black",
                 size=12,
-                weight="bold"  # Bold font for tick labels
+                weight="bold"
             )
         ),
         yaxis=dict(
             title=dict(
                 font=dict(
-                    color="black",  # Darker color for y-axis title
-                    size=14,  # Font size for y-axis title
-                    family="Arial",  # Font family for y-axis title
-                    weight="bold"  # Bold font
+                    color="black",
+                    size=14,
+                    family="Arial",
+                    weight="bold"
                 )
             ),
             tickfont=dict(
-                color="black",  # Darker color for y-axis ticks
+                color="black",
                 size=12,
-                weight="bold"  # Bold font for tick labels
+                weight="bold"
             )
         ),
         shapes=[
@@ -234,7 +234,7 @@ if user_menu == "Overall Analysis":
                 x1=1,
                 y1=1,
                 line=dict(color='lightblue', width=2),
-                fillcolor='rgba(255,255,255,0)',  # Transparent fill
+                fillcolor='rgba(255,255,255,0)',
             )
         ]
     )
@@ -259,14 +259,14 @@ if user_menu == "Overall Analysis":
         font=dict(color="black"),
         xaxis=dict(
             title=dict(
-                text="Age",  # X-axis title
+                text="Age",
                 font=dict(color="black", size=14, weight="bold")
             ),
             tickfont=dict(color="black", size=12, weight="bold")
         ),
         yaxis=dict(
             title=dict(
-                text="Density",  # Y-axis title
+                text="Density",
                 font=dict(color="black", size=14, weight="bold")
             ),
             tickfont=dict(color="black", size=12, weight="bold")
@@ -303,7 +303,7 @@ if user_menu == "Country-wise Analysis":
 
     if selected_country == 'Select':
         st.subheader("Citius, Altius, Fortius – Communiter")
-        image_path = "olympics-analysis/pictures/d6xr603fq0g71.webp"
+        image_path = "https://raw.githubusercontent.com/rajnish-dubey/olympics-analysis/main/pictures/d6xr603fq0g71.webp"
         st.image(image_path, use_column_width=True)
 
     else:
@@ -316,35 +316,35 @@ if user_menu == "Country-wise Analysis":
             fig.update_layout(
                 plot_bgcolor="#f0f0f0",
                 paper_bgcolor="#ffffff",
-                font=dict(color="#000000"),  # Global font color
+                font=dict(color="#000000"),
                 xaxis=dict(
                     title=dict(
                         font=dict(
-                            color="black",  # Darker color for x-axis title
-                            size=14,  # Font size for x-axis title
-                            family="Arial",  # Font family for x-axis title
-                            weight="bold"  # Bold font
+                            color="black",
+                            size=14,
+                            family="Arial",
+                            weight="bold"
                         )
                     ),
                     tickfont=dict(
-                        color="black",  # Darker color for x-axis ticks
+                        color="black",
                         size=12,
-                        weight="bold"  # Bold font for tick labels
+                        weight="bold"
                     )
                 ),
                 yaxis=dict(
                     title=dict(
                         font=dict(
-                            color="black",  # Darker color for y-axis title
-                            size=14,  # Font size for y-axis title
-                            family="Arial",  # Font family for y-axis title
-                            weight="bold"  # Bold font
+                            color="black",
+                            size=14,
+                            family="Arial",
+                            weight="bold"
                         )
                     ),
                     tickfont=dict(
-                        color="black",  # Darker color for y-axis ticks
+                        color="black",
                         size=12,
-                        weight="bold"  # Bold font for tick labels
+                        weight="bold"
                     )
                 )
             )
@@ -435,59 +435,59 @@ if user_menu == "Player-wise Analysis":
             autosize=False,
             width=1000,
             height=600,
-            plot_bgcolor='rgba(240, 240, 240, 0.8)',  # Light grey background for the plot
-            paper_bgcolor='rgba(255, 255, 255, 1)',  # White background for the entire figure
-            font=dict(color="black"),  # Global font color to ensure text is darker
+            plot_bgcolor='rgba(240, 240, 240, 0.8)',
+            paper_bgcolor='rgba(255, 255, 255, 1)',
+            font=dict(color="black"),
             xaxis=dict(
                 title=dict(
-                    text="Age",  # X-axis title
+                    text="Age",
                     font=dict(
-                        color="black",  # Darker color for x-axis title
+                        color="black",
                         size=14,
-                        weight="bold"  # Bold font for x-axis title
+                        weight="bold"
                     )
                 ),
                 tickfont=dict(
-                    color="black",  # Darker color for x-axis ticks
+                    color="black",
                     size=12,
-                    weight="bold"  # Bold font for tick labels
+                    weight="bold"
                 )
             ),
             yaxis=dict(
                 title=dict(
-                    text="Density",  # Y-axis title
+                    text="Density",
                     font=dict(
-                        color="black",  # Darker color for y-axis title
+                        color="black",
                         size=14,
-                        weight="bold"  # Bold font for y-axis title
+                        weight="bold"
                     )
                 ),
                 tickfont=dict(
-                    color="black",  # Darker color for y-axis ticks
+                    color="black",
                     size=12,
-                    weight="bold"  # Bold font for tick labels
+                    weight="bold"
                 )
             ),
             annotations=[
                 dict(
-                    x=1.1,  # Slightly to the right of the plot (right of the legend)
-                    y=1.05,  # Positioning above the legend
-                    text="Select",  # The text to display
+                    x=1.1,
+                    y=1.05,
+                    text="Select",
                     showarrow=False,
-                    xref="paper",  # Relative to the whole plot width
-                    yref="paper",  # Relative to the whole plot height
-                    font=dict(size=16, color="black")  # Styling of the text
+                    xref="paper",
+                    yref="paper",
+                    font=dict(size=16, color="black")
                 )
             ]
         )
-        fig.update_traces(marker=dict(line=dict(color='black', width=1)))  # Black border for traces
+        fig.update_traces(marker=dict(line=dict(color='black', width=1)))
         fig.update_traces(visible='legendonly')
         fig.data[0].visible = True
         st.subheader("Age Distribution")
         st.plotly_chart(fig)
 
     else:
-        image_path = "olympics-analysis/pictures/wu_1626844917.jpg"
+        image_path = "https://raw.githubusercontent.com/rajnish-dubey/olympics-analysis/main/pictures/wu_1626844917.jpg"
         st.image(image_path, use_column_width=True)
 
         athlete_data = df[df['Name'] == selected_player]
@@ -512,12 +512,12 @@ if user_menu == "Player-wise Analysis":
                 tickmode='array',
                 tickvals=medal_counts['Year'].unique(),
                 ticktext=medal_counts['Year'].unique(),
-                title=dict(font=dict(size=14, weight='bold'))  # Make x-axis title bold
+                title=dict(font=dict(size=14, weight='bold'))
             ),
             yaxis=dict(
                 dtick=1,
-                title=dict(font=dict(size=14, weight='bold'))  # Make y-axis title bold
+                title=dict(font=dict(size=14, weight='bold'))
             ),
-            font=dict(size=14)  # Optional: Adjust the overall font size if needed
+            font=dict(size=14)
         )
         st.plotly_chart(fig)
