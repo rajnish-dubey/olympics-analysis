@@ -36,7 +36,8 @@ if user_menu == "Medal Tally":
     selected_year = st.sidebar.selectbox("Select Year", year)
     selected_country = st.sidebar.selectbox("Select Country", country)
     medal_tally = helper.fetch_medal_tally(df, selected_year, selected_country)
-    medal_tally['Year'] = medal_tally['Year'].astype(str)
+    if 'Year' in medal_tally.columns:
+        medal_tally['Year'] = medal_tally['Year'].astype(str)
     medal_tally.rename(columns={'region': 'Region'}, inplace=True)
     if selected_year == 'Overall' and selected_country == 'Overall':
         st.subheader("Overall Tally")
