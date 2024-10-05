@@ -7,16 +7,10 @@ import seaborn as sns
 import plotly.figure_factory as ff
 from streamlit_option_menu import option_menu
 
-@st.cache_data
-def load_data():
-    df = pd.read_csv('athlete_events.csv')
-    region_df = pd.read_csv('noc_regions.csv')
-    return df, region_df
-@st.cache_data
-def preprocess_data(df, region_df):
-    return preprocessor.preprocessor(df, region_df)
-df, region_df = load_data()
-df = preprocess_data(df, region_df)
+df = pd.read_csv('athlete_events.csv')
+region_df = pd.read_csv('noc_regions.csv')
+df = preprocessor.preprocessor(df, region_df)
+
 st.sidebar.markdown(
     "<h1 style='font-size:32px;'>Olympics Analysis</h1>",
     unsafe_allow_html=True
